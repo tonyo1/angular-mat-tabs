@@ -1,0 +1,47 @@
+/* app.component.css */
+
+/* Container styling */
+nav[mat-tab-nav-bar] {
+  margin-bottom: 24px;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Individual tab styling */
+.mat-mdc-tab-link {
+  padding: 16px 32px !important;
+  color: #4b5563;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+/* Hover effect */
+.mat-mdc-tab-link:hover {
+  background-color: #f1f5f9;
+  color: #1e40af;
+}
+
+/* Active tab - Strong corporate visual feedback */
+.mat-mdc-tab-link-active {
+  color: #1e40af !important;
+  font-weight: 600;
+  background-color: #f8fafc;
+  border-bottom: 3px solid #1e40af;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: -1px;
+  box-shadow: 0 -3px 8px rgba(30, 64, 175, 0.12);
+}
+
+/* Active indicator (ink bar) - Corporate Blue */
+.mat-mdc-tab-nav-bar .mdc-tab-indicator__content--underline {
+  border-color: #1e40af;
+  height: 4px;
+  border-radius: 4px 4px 0 0;
+}
+
+/* Subtle bottom border on all tabs */
+.mat-mdc-tab {
+  border-bottom: 1px solid transparent;
+}

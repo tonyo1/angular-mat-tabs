@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';   /* or deeppurple-amber, etc. */
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+/* Optional: Custom theme tweaks */
+.mat-mdc-tab-nav-bar {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.mat-mdc-tab {
+  font-weight: 500;
+  min-width: 120px;
+}
+
+/* Active tab styling */
+.mat-mdc-tab-link-active {
+  color: #1976d2 !important;
+  font-weight: 600;
+}
