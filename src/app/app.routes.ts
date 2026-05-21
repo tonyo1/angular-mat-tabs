@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from '../components/home/home.component';
 import { AboutComponent } from '../components/about/about.component';
 import { ContactComponent } from '../components/contact/contact.component';
+import { oidcAuthGuard } from './guards/oidc-auth.guard';
 
 
 
@@ -19,10 +20,11 @@ export const routes: Routes = [
       path: 'about', component: AboutComponent,
       data: { label: 'About' }
    },
-   {
+    {
       path: 'contact', component: ContactComponent,
+      canActivate: [oidcAuthGuard],
       data: { label: 'Contact' }
-   }
+    }
 
 
 ];
