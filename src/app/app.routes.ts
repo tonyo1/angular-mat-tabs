@@ -2,9 +2,9 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from '../components/home/home.component';
 import { AboutComponent } from '../components/about/about.component';
 import { ContactComponent } from '../components/contact/contact.component';
-import { oidcAuthGuard } from './guards/oidc-auth.guard';
-
-
+import { hasClaimGuard } from '../app/core/auth/guards/has-claim.guard';
+import { AuthErrorComponent } from '../components/auth-error/auth-error.component';
+ 
 
 
 
@@ -22,9 +22,11 @@ export const routes: Routes = [
    },
     {
       path: 'contact', component: ContactComponent,
-      canActivate: [oidcAuthGuard],
+      canActivate: [hasClaimGuard],
       data: { label: 'Contact' }
+    },
+    {
+      path: 'auth-error', component: AuthErrorComponent,
+      data: { label: 'Auth Error' }
     }
-
-
 ];

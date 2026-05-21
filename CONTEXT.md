@@ -9,3 +9,5 @@
 ## Key Concepts
 
 Contact route is now an OIDC-protected inquiry boundary. Unauthenticated access triggers `initLoginFlow()` preserving return URL via sessionStorage.
+
+**Enhanced OIDC Route Guard (2026-05)**: Callback detection inside `oidcAuthGuard` triggers `mapOidcClaimsToUser` (example claims: "ab:xxxxxx:xxxxx" mapped into `User.Claims[]`). Populates `AuthService.currentUser$` (BehaviorSubject) on successful redirect. Failures route to dedicated `/auth-error`. Uses "TBD" placeholders for client secrets/URLs. Supports silent refresh + claims-based checks. Aligns with existing guard patterns and domain glossary.

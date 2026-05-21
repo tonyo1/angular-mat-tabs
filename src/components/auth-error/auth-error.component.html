@@ -1,0 +1,7 @@
+<div class="auth-error-container">
+  <h2>Authentication Error</h2>
+  <p class="error-reason">{{ errorReason }}</p>
+  <p class="error-message">{{ errorMessage }}</p>
+  <p>Edge cases handled: missing cookie, invalid claims, expired token.</p>
+  <button (click)="retryLogin()">Retry Login</button>
+</div>
